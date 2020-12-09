@@ -2,15 +2,18 @@ import Link from 'next/link'
 
 function Index({ stars, thejson }) {
   return (
-    <div>
-      <p>Next.js has {stars} ⭐️</p>
-      <Link href="/preact-stars">
-        <a>How about preact?</a>
-      </Link>
-      {
-        thejson.completed ? <p>{thejson.title}</p> : <p>JSON Place holder task not completed.</p>
-      }
-    </div>
+    <>
+      <title>Sample NextJS Data Fetch</title>
+      <div className="body" >
+        <p>Next.js has {stars} ⭐️</p>
+        <Link href="/preact-stars">
+          <a>How about preact?</a>
+        </Link>
+        {
+          thejson.completed ? <p>{thejson.title}</p> : <p>JSON Place holder task not completed.</p>
+        }
+      </div>
+    </>
   )
 }
 
