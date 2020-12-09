@@ -12,6 +12,9 @@ function Index({ stars }) {
 }
 
 export async function getStaticProps() {
+  setTimeout(() => {
+    console.log("just waiting")
+  }, 3000);
   const res = await fetch('https://api.github.com/repos/vercel/next.js')
   const json = await res.json()
 
